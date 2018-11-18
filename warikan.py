@@ -14,16 +14,16 @@
 # print(f"1人あたり: {amount // number_of_people}円, 端数: {amount % number_of_people}円")
 
 
-def warikan(price, count):
-    return price // count, price % count
+def warikan_split(amount, count):
+    return amount // count, amount % count
 
 
 while 1:
-    price = input("割り勘する金額を入力してください : ")
-    if price == "": break
+    amount = input("割り勘する金額を入力してください : ")
+    if amount == "": break
 
     count = input("割り勘する人数を入力してください : ")
     if count == "": break
 
-    result = warikan(int(price), int(count))
+    result = warikan_split(int(amount), int(count))
     print(f"1人あたり: {str(result[0])}円, 端数: {str(result[1])}円")
